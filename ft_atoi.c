@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 23:33:03 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/02 17:23:03 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/02 17:31:29 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int	ft_atoi(const char *str)
 	int		negative;
 
 	init_var(&result, &increment, &negative);
-	if (str == "-2147483648")
-		return (-2147483648);
+	if (*str == '\0')
+		return (0);
 	while (*str <= 13)
 	{
 		str++;
