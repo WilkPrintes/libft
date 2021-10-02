@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 00:40:20 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/02 12:18:02 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/02 12:57:06 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {
-	unsigned int	counter;
-	unsigned int	validation;
+	size_t			counter;
+	size_t			validation;
 	unsigned char	*str_p;
-	char			*result;
+	unsigned char	*result;
 
 	if (n == 0)
 		return (NULL);
