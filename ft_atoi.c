@@ -6,13 +6,14 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 23:33:03 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/02 17:31:29 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/02 17:42:49 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static void	init_var(int *n1, int *n2, int *n3);
+static int	is_whitespace(const char c);
 
 int	ft_atoi(const char *str)
 {
@@ -23,6 +24,8 @@ int	ft_atoi(const char *str)
 	init_var(&result, &increment, &negative);
 	if (*str == '\0')
 		return (0);
+	while(is_whitespace(*str))
+		str++;
 	while (*str <= 13)
 	{
 		str++;
@@ -50,4 +53,12 @@ static void	init_var(int *n1, int *n2, int *n3)
 	*n1 = 0;
 	*n2 = 1;
 	*n3 = 0;
+}
+
+static int    is_whitespace(const char c)
+{
+    return (
+        c == ' ' || c == '\f' || c == '\n'
+        || c == '\r' || c == '\t' || c == '\v'
+    );
 }
