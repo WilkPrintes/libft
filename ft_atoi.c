@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 23:33:03 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/02 17:42:49 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/02 17:55:50 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,6 @@ int	ft_atoi(const char *str)
 		return (0);
 	while(is_whitespace(*str))
 		str++;
-	while (*str <= 13)
-	{
-		str++;
-	}
 	if (*str == 43 || *str == 45)
 	{
 		if (*str == 45)
@@ -38,9 +34,7 @@ int	ft_atoi(const char *str)
 	}
 	while (*str >= 48 && *str <= 57)
 	{
-		result = result * increment;
-		result = result + (*str - '0');
-		increment = 10;
+		result = result * increment + *str - '0';
 		str++;
 	}
 	if (negative == 1)
@@ -51,7 +45,7 @@ int	ft_atoi(const char *str)
 static void	init_var(int *n1, int *n2, int *n3)
 {
 	*n1 = 0;
-	*n2 = 1;
+	*n2 = 10;
 	*n3 = 0;
 }
 
