@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 10:45:36 by wprintes          #+#    #+#             */
-/*   Updated: 2021/09/30 22:52:33 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/02 19:16:46 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*a;
 
 	a = ft_strdup(s);
-	if (a == NULL)
+	if (!a)
 		return (NULL);
 	counter = 0;
 	while (a[counter] != '\0')
