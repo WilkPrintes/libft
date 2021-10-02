@@ -6,22 +6,23 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 00:40:31 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/02 19:21:07 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/02 20:05:19 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t			count;
-	unsigned char	*dest_value;
-	unsigned char	*src_value;
+	char	*dest_value;
+	char	*src_value;
 
 	if(!dest || !src || !n)
-		return (NULL);
-	src_value = (unsigned char *) src;
-	dest_value = (unsigned char *) dest;
+		return (dest);
+	src_value = (char *) src;
+	dest_value = (char *) dest;
 	count = 0;
 	if (dest > src)
 	{
@@ -40,4 +41,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		}
 	}
 	return (dest);
+}
+
+int main(void)
+{
+	char *a = ft_memmove(((void *)0), ((void *)0), 3);
+	char *b = memmove(((void *)0), ((void *)0), 3);
+
+	if (a == b)
+		printf("é isso\n");
 }
