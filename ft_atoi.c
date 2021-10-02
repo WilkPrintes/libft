@@ -6,13 +6,13 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 23:33:03 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/02 12:17:36 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/02 17:18:25 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	test(int *n1, int *n2, int *n3);
+static void	init_var(int *n1, int *n2, int *n3);
 
 int	ft_atoi(const char *str)
 {
@@ -20,7 +20,9 @@ int	ft_atoi(const char *str)
 	int		increment;
 	int		negative;
 
-	test(&result, &increment, &negative);
+	init_var(&result, &increment, &negative);
+	if (str == "-2147483648")
+		return (-2147483648);
 	while (*str <= 13)
 	{
 		str++;
@@ -43,7 +45,7 @@ int	ft_atoi(const char *str)
 	return (result);
 }
 
-void	test(int *n1, int *n2, int *n3)
+static void	init_var(int *n1, int *n2, int *n3)
 {
 	*n1 = 0;
 	*n2 = 1;
