@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 10:19:56 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/02 15:14:02 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/09/29 23:37:32 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 	counter = 0;
 	if (n == 0)
 		return (0);
-	while (counter < n && *str1_char != '\0' && *str2_char != '\0')
+	while (counter < n)
 	{
 		if (*str1_char != *str2_char)
 		{
