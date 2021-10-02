@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 00:42:03 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/02 14:43:55 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/02 14:51:56 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		ft_isprint(int c);
 void	*ft_memset(void *str, int c, size_t n);
 char	*ft_strchr(const char *str, int c);
 int		ft_tolower(int a);
-int		ft_toupper(int a);
+int    ft_toupper(int c);
 int		ft_atoi(const char *str);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *str1, const void *str2, size_t n);
