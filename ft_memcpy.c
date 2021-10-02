@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 00:40:28 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/02 19:21:12 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/02 19:24:43 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*src_value;
 
 	if(!dest || !src || !n)
-		return (NULL);
+		return (dest);
 	count = 0;
 	while (count < n)
 	{
