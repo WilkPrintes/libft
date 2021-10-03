@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 17:14:11 by wprintes          #+#    #+#             */
-/*   Updated: 2021/09/22 22:36:46 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/03 13:08:27 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	counter = 0;
 	s1_value = (char *)s1;
 	s2_value = (char *)s2;
-	result = malloc((ft_strlen(s1_value) + ft_strlen(s2_value)) + 1);
+	result = ft_calloc(sizeof(char), (ft_strlen(s1_value) + ft_strlen(s2_value)) + 1);
 	while (s1_value[counter] != '\0')
 	{
 		result[counter] = s1_value[counter];
