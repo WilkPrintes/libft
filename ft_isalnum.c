@@ -6,13 +6,13 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 00:39:44 by wprintes          #+#    #+#             */
-/*   Updated: 2021/09/16 00:39:50 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/03 13:48:12 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(char c)
+int	ft_isalnum(int c)
 {
 	if (c >= 65 && c <= 90)
 		return (1);

@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 08:24:03 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/02 11:32:49 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/03 11:56:21 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char **ft_split(char const *s, char c)
 	if (ft_strlen((char *) s) == separator)
 	{
 		result = malloc(sizeof(char *));
-		result[0] = '\0';
+		result[0] = NULL;
 		return (result);
 	}
 	if (separator == 0 )
@@ -42,7 +42,7 @@ char **ft_split(char const *s, char c)
 	result = malloc (sizeof(char **) * (ft_strlen((char *) s) - separator + 1));
 	if (result == NULL)
 		return (NULL);
-	while(s[count] != '\0')
+	while(s[count] != '\0' && separator != 0)
 	{
 		if (s[count] == c)
 		{
@@ -53,6 +53,7 @@ char **ft_split(char const *s, char c)
 					count++;
 				temp = count;
 				index_r++;
+				separator--;
 			}
 			else
 			{
@@ -60,11 +61,10 @@ char **ft_split(char const *s, char c)
 					count++;
 				temp = count;
 			}
-
 		}
 		count++;
 	}
-	if (s[count] != c)
+	if (separator != 0)
 	{
 		result[index_r] = ft_substr(s, temp, count - temp);
 		index_r++;
@@ -81,7 +81,12 @@ static int	counter_c(char *s, char c)
 	while(*s != '\0')
 	{
 		if(*s == c)
-			result++;
+		{
+			while(*s == c)
+				s++;
+			if (*s != '\0')
+				result++;
+		}
 		s++;
 	}
 	return (result);
