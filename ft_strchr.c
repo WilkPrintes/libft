@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 00:40:35 by wprintes          #+#    #+#             */
-/*   Updated: 2021/09/16 13:14:51 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/03 17:41:10 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,14 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	unsigned char	s1;
+	char	s1;
 
 	s1 = c;
-	if (ft_isascii(s1) == 1)
+	while (*str != '\0')
 	{
-		while (*str != '\0')
-		{
-			if (*str == s1)
-				return ((char *) str);
-			str++;
-		}
+		if (*str == s1)
+			return ((char *) str);
+		str++;
 	}
 	if (s1 == '\0')
 		return ((char *) str);
