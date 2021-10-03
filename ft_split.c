@@ -6,19 +6,20 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 08:24:03 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/03 18:21:49 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/03 19:11:07 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static size_t	counter_c(char *s, char c);
-static char **test(char *s, char **result, size_t separator, char c);
+static char		**test(char *s, char **result, size_t separator, char c);
+static void		init_var(size_t *a, size_t *b, size_t *c);
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**result;
-	size_t		separator;
+	size_t	separator;
 
 	separator = counter_c((char *) s, c);
 	result = ft_calloc(separator + 1, sizeof(char *));
@@ -35,14 +36,14 @@ char **ft_split(char const *s, char c)
 
 static size_t	counter_c(char *s, char c)
 {
-	int result;
+	int	result;
 
 	result = 0;
-	while(*s != '\0')
+	while (*s != '\0')
 	{
-		if(*s != c)
+		if (*s != c)
 		{
-			while(*s != c && *s != '\0')
+			while (*s != c && *s != '\0')
 				s++;
 			result++;
 		}
@@ -52,41 +53,37 @@ static size_t	counter_c(char *s, char c)
 	return (result);
 }
 
-static char **test(char *s, char **result, size_t separator, char c)
+static char	**test(char *s, char **result, size_t separator, char c)
 {
-	size_t count = 0;
-	size_t temp = 0;
-	size_t 	index_r;
+	size_t	count;
+	size_t	temp;
+	size_t	index_r;
 
-	index_r = 0;
-	while(s[count] != '\0' && separator != 0)
+	init_var(&count, &temp, &index_r);
+	while (s[count] != '\0' && separator != 0)
 	{
 		if (s[count] == c)
 		{
 			if (count != 0 || separator == 1)
 			{
-				result[index_r] = ft_substr(s, temp, count - temp);
-				while (s[count] == c)
-					count++;
-				temp = count;
-				index_r++;
+				result[index_r++] = ft_substr(s, temp, count - temp);
 				separator--;
 			}
-			else
-			{
-				while (s[count] == c)
-					count++;
-				temp = count;
-			}
+			while (s[count] == c)
+				count++;
+			temp = count;
 		}
 		else
 			count++;
 	}
 	if (separator != 0)
-	{
-		result[index_r] = ft_substr(s, temp, count - temp );
-		index_r++;
-	}
-
+		result[index_r] = ft_substr(s, temp, count - temp);
 	return (result);
+}
+
+static void	init_var(size_t *a, size_t *b, size_t *c)
+{
+	*a = 0;
+	*b = 0;
+	*c = 0;
 }

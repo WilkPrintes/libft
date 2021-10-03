@@ -1,6 +1,6 @@
 NAME	=	libft.a
 
-CC		=	gcc
+CC		=	clang
 CFLAGS	=	-Wall -Werror -Wextra
 AR		=	ar rcs
 SRCS	=	ft_isalpha.c	ft_isdigit.c	ft_isalnum.c	ft_isascii.c	\
@@ -15,7 +15,6 @@ SRCS	=	ft_isalpha.c	ft_isdigit.c	ft_isalnum.c	ft_isascii.c	\
 
 OBJS	=	$(SRCS:.c=.o)
 
-
 all: $(NAME)
 
 $(NAME): $(OBJS)
@@ -24,18 +23,12 @@ $(NAME): $(OBJS)
 $(OBJS): $(SRCS)
 	$(CC) -c $(SRCS)
 
-bonus: $(OBJS) $(B_OBJS)
-	$(AR) $(NAME) $(OBJS) $(B_OBJS)
-
-$(B_OBJS): $(B_SRCS)
-	$(CC) -c $(B_SRCS)
-
 clean:
-	rm -rf $(OBJS) $(B_OBJS)
+	rm -rf $(OBJS)
 
 fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re

@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 00:40:31 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/03 14:50:39 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/03 18:58:34 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t			count;
+	size_t	count;
 	char	*dest_value;
 	char	*src_value;
 

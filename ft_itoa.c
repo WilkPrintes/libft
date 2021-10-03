@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 14:50:58 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/03 13:05:36 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/03 18:56:47 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,7 @@ char	*ft_itoa(int n)
 	if (n == -2147483648)
 		return (ft_substr("-2147483648", 0, 11));
 	if (n < 0)
-	{
-		n = n * (-1);
-		negative = 1;
-	}
+		n = n * (-1) + negative++;
 	d_places = decimal_places(n);
 	index = 0;
 	result = ft_calloc(sizeof(char), d_places + negative + 1);
