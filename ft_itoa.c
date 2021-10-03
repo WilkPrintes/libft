@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 14:50:58 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/03 11:58:31 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/03 13:05:36 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_itoa(int n)
 	}
 	d_places = decimal_places(n);
 	index = 0;
-	result = malloc(d_places * sizeof(char) + negative + 1);
+	result = ft_calloc(sizeof(char), d_places + negative + 1);
 	if (!result)
 		return (NULL);
 	if (negative == 1)
