@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 00:40:31 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/03 14:44:11 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/03 14:46:51 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			count++;
 		}
 	}
-	else
+	else if (dest < src)
 	{
 		while (count < n)
 		{
