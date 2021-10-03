@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 17:39:34 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/03 12:10:35 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/03 12:12:15 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	s_len;
 
 	counter = 0;
+	if (!s)
+		return (NULL);
 	s_len = ft_strlen((char *)s);
 	if (start > ft_strlen((char *)(s)))
 		return (ft_calloc(1, 1));
