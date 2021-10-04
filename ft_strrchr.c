@@ -6,13 +6,11 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 00:40:45 by wprintes          #+#    #+#             */
-/*   Updated: 2021/09/18 23:15:01 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/03 20:01:14 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {
