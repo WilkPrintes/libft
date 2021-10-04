@@ -21,7 +21,7 @@ $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
 $(OBJS): $(SRCS)
-	$(CC) -c $(SRCS)
+	$(CC) $(CFLAGS) -c $(SRCS)
 
 clean:
 	rm -rf $(OBJS)

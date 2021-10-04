@@ -6,21 +6,22 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 00:39:41 by wprintes          #+#    #+#             */
-/*   Updated: 2021/09/16 00:39:48 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/04 19:42:58 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(char *str, size_t n)
+void	ft_bzero(void *str, size_t n)
 {
-	int	counter;
+	size_t			counter;
+	char			*str_p;
 
 	counter = 0;
-	while (counter < n)
+	str_p = str;
+	while (counter != n)
 	{
-		str[counter] = '\0';
-		counter ++;
+		str_p[counter] = '\0';
+		counter++;
 	}
-	return (str);
 }
