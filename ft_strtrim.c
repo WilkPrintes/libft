@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 15:33:09 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/04 20:04:00 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/04 20:49:05 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	end;
 
-	if(!s1 || !set)
+	if (!s1 || !set)
 		return (NULL);
 	start = 0;
 	end = 0;

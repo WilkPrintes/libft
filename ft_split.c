@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 08:24:03 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/04 20:43:05 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/04 20:47:35 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	**ft_split(char const *s, char c)
 	char	**result;
 	size_t	separator;
 
-	if(!s)
+	if (!s)
 		return (NULL);
 	separator = counter_c((char *) s, c);
 	result = ft_calloc(separator + 1, sizeof(char *));

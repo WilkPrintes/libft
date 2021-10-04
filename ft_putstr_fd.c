@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 23:57:33 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/04 20:41:19 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/04 20:47:26 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	char	temp;
 
-	if(s && fd)
+	if (s && fd)
 	{
 		while (*s != '\0')
 		{
