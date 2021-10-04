@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 17:14:11 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/03 18:48:51 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/04 19:31:03 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*s1_val;
 	char	*s2_val;
 
+	if (!s1 || !s2)
+		return (NULL);
 	counter = 0;
 	s1_val = (char *)s1;
 	s2_val = (char *)s2;
