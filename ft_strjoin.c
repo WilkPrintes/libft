@@ -6,7 +6,7 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 17:14:11 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/04 21:00:12 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/04 21:02:20 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	result = malloc(sizeof(char) * (ft_strlen(s1_val) + ft_strlen(s2_val)) + 1);
 	if (result == NULL)
 		return (NULL);
-	result = bomDia(s1_val, s2_val, result);
+	result = join(s1_val, s2_val, result);
 	return (result);
 }
 
