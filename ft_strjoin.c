@@ -6,13 +6,13 @@
 /*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 17:14:11 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/04 21:02:39 by wprintes         ###   ########.fr       */
+/*   Updated: 2021/10/06 00:00:15 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*join(char *s1_val, char *s2_val, char *result);
+static char	*join(char *s1_val, char *s2_val, char *result);
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
