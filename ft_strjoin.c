@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
+/*   By: wprintes < wprintes@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 17:14:11 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/06 00:00:15 by wprintes         ###   ########.fr       */
+/*   Updated: 2022/02/11 02:39:02 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static char	*join(char *s1_val, char *s2_val, char *result);
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char const *s2)
 {
 	char	*result;
 	char	*s1_val;

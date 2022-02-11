@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
+/*   By: wprintes < wprintes@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 00:42:03 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/05 23:57:15 by wprintes         ###   ########.fr       */
+/*   Updated: 2022/02/11 02:21:46 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
+
+# if __APPLE__
+#  define IS_MACOS 1
+# else
+#  define IS_MACOS 0
+# endif
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -44,10 +51,18 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *s1, const char *s2, size_t size);
 char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(char *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int		dec_to_hex(unsigned int a, int cap);
+int		dec_to_hex_l(unsigned long a, int cap);
+int		ft_printf(const char *s, ...);
+int		ft_printf(const char *s, ...);
+int		ft_putstr(char *s);
+int		ft_putchar(const int c);
+char	*ft_strchr(const char *str, int c);
+char	*ft_utoa(unsigned int n);
 
 #endif
